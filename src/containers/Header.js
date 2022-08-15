@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import Navbar from './Navbar';
+import { Div, Input, Button } from "atomize";
 
+const theme = {
+    colors: {
+        black900: "#1d1d1e"
+    }
+};
 
 class Header extends Component {
     state = {
@@ -16,10 +22,9 @@ class Header extends Component {
             { name: "Contact"},
             { name: "Login"}
             ];
-
         return (
-            <nav className={"sticky-nav"}>
-            <div>
+            <nav>
+            <Div>
                 <ul className="nav-left">
                     {clickables.map((clickable, i) => {
                         return <Navbar
@@ -32,16 +37,18 @@ class Header extends Component {
                     })
                     }
                 </ul>
-            </div>
-                <div class="nav-right">
-                    <input type="search" className="form-control rounded"
+            </Div>
+            <Div>
+                <ul class="nav-right">
+                    <Input type="search" className="form-control rounded"
                            placeholder="Search" aria-label="Search"
                            aria-describedby="search-addon"/>
-                    <button type="button" className="btn btn-outline-primary">
-                        search</button>
-                </div>
+                    <Button type="button" className="btn btn-outline-primary">
+                        search</Button>
+                </ul>
+            </Div>
             </nav>
-        )
+        );
     }
 }
 

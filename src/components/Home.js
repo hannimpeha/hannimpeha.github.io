@@ -8,6 +8,7 @@ const Home = ()=>  {
         transform: 'translate(-50%, -50%)'
     }}>
         <img src={logo} class="center"/>
+        <h1>Welcom to Hannah's homepage</h1>
     </div>
     );
 }

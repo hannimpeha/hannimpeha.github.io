@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const Login = () => {
     return(
         <div className="Login" style={{
@@ -19,7 +20,8 @@ const Login = () => {
                     <input type="submit" />
                 </div>
             </form>
-        </div>)
+        </div>
+    )
 }
 
 export default Login;

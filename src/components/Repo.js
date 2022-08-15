@@ -3,7 +3,7 @@ import React from 'react';
 const Repo = () => {
     return(
         <div className="Wiki">
-            <h1>This is Hannimpeha's Wiki</h1>
+            <h1>This is hannimpeha's Repo</h1>
         </div>)
 }
 
