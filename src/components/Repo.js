@@ -2,8 +2,8 @@ import React from 'react';
 
 const Repo = () => {
     return(
-        <div className="Repo">
-            <h1>This is Hannimpeha's Repo</h1>
+        <div className="Wiki">
+            <h1>This is Hannimpeha's Wiki</h1>
         </div>)
 }
 

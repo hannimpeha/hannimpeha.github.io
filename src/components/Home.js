@@ -1,10 +1,13 @@
 import React from 'react';
+import logo from '../images/photo/namecard.png';
 
 const Home = ()=>  {
     return(
-    <div className="Home">
-        <h1>Hello CodeSandbox</h1>
-        <h2>Start editing to see some magic happen!</h2>
+    <div className="Home" style={{
+        position: 'absolute', left: '50%', top: '50%',
+        transform: 'translate(-50%, -50%)'
+    }}>
+        <img src={logo} class="center"/>
     </div>
     );
 }

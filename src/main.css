@@ -81,6 +81,16 @@ button {
     top: 0;
 }
 
+img {
+    height: 500px;
+    width: 500px;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
 .Home {
     padding: 100px 100px 100px 100px;
 }
