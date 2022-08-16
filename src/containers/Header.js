@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
 import Navbar from './Navbar';
-import { Div, Input, Button } from "atomize";
 
-const theme = {
-    colors: {
-        black900: "#1d1d1e"
-    }
-};
 
 class Header extends Component {
     state = {
-        activeIndex: null
+        activeIndex: null,
+        username: '',
+        password: '',
+        errors: [],
     }
     handleClick = (index) => this.setState({ activeIndex: index });
     render() {
@@ -22,9 +19,10 @@ class Header extends Component {
             { name: "Contact"},
             { name: "Login"}
             ];
+
         return (
             <nav>
-            <Div>
+            <div>
                 <ul className="nav-left">
                     {clickables.map((clickable, i) => {
                         return <Navbar
@@ -37,16 +35,16 @@ class Header extends Component {
                     })
                     }
                 </ul>
-            </Div>
-            <Div>
+            </div>
+            <div>
                 <ul class="nav-right">
-                    <Input type="search" className="form-control rounded"
+                    <input type="search" className="form-control rounded"
                            placeholder="Search" aria-label="Search"
                            aria-describedby="search-addon"/>
-                    <Button type="button" className="btn btn-outline-primary">
-                        search</Button>
+                    <button type="button" className="btn btn-outline-primary">
+                        search</button>
                 </ul>
-            </Div>
+            </div>
             </nav>
         );
     }

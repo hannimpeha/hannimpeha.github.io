@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../images/photo/namecard.png';
+import logo from '../../images/photos/namecard.png';
 
 const Home = ()=>  {
     return(
