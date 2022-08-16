@@ -64,11 +64,7 @@ export class Provider extends Component {
             </BlogContext.Provider>
         );
     }
-
-
-
-
 }
 
-
 export const Consumer = BlogContext.Consumer;
+
