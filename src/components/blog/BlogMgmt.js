@@ -13,7 +13,6 @@ class BlogMgmt extends PureComponent {
 
     render() {
         const { index } = this.props;
-
         return (
             <div>
                 <Consumer>
@@ -21,7 +20,9 @@ class BlogMgmt extends PureComponent {
                         <span>
               <button onClick={() => actions.removeBlog(blogs[index].id)}>✖</button>
                             { blogs[index].title }
+                            <p> {blogs[index].content} </p>
                         </span>
+
                     )}
                 </Consumer>
             </div>

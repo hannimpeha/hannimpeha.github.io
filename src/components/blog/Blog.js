@@ -6,7 +6,7 @@ import {Provider} from "./Context";
 const Blog = () => {
     return (
         <Provider>
-        <div>
+        <div className="Blog">
             <BlogList />
             <AddBlog />
         </div>
