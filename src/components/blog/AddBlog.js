@@ -2,13 +2,16 @@ import React from 'react';
 import { Consumer } from './Context';
 
 const AddBlog = () => {
-    const blogInput = React.createRef();
+    const blogInputTitle = React.createRef();
+    const blogInputContent = React.createRef();
     return (
         <Consumer>
             { ({ actions }) => {
                 const handleSubmit = (e) => {
                     e.preventDefault();
-                    actions.addBlog(blogInput.current.value);
+                    actions.addBlog(blogInputTitle.current.value,
+                        blogInputContent.current.value);
+                    actions.
                     e.currentTarget.reset();
                 }
 
@@ -16,7 +19,12 @@ const AddBlog = () => {
                     <form onSubmit={handleSubmit}>
                         <input
                             type="text"
-                            ref={blogInput}
+                            ref={blogInputTitle}
+                            placeholder="Enter Blog's Title"
+                        />
+                        <input
+                            type="text"
+                            ref={blogInputContent}
                             placeholder="Enter Blog's Content"
                         />
 

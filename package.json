@@ -1,7 +1,8 @@
 {
   "name": "homepage",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.3.0",
@@ -16,13 +17,8 @@
     "react-router-dom": "^5.3.0",
     "react-scripts": "4.0.3",
     "react-transition-group": "^4.4.5",
-    "web-vitals": "^2.1.4"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "web-vitals": "^2.1.4",
+    "js-cookie": "^3.0.1"
   },
   "devDependencies": {
     "react-favicon": "^1.0.1",
@@ -31,6 +27,12 @@
     "styletron-react": "^6.1.0",
     "workbox-webpack-plugin": "^6.5.4"
   },
+  "scripts": {
+    "start": "react-scripts start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
   "browserslist": {
     "production": [
       ">0.2%",

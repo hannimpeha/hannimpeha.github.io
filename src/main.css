@@ -75,6 +75,8 @@ input {
     font-size: 18px;
     padding: 15px 30px;
     border: 0;
+    width: 160px;
+    margin-top: 10px;
     margin-right: 10px;
     border-radius: 8px;
     font-weight: bold;
@@ -86,18 +88,6 @@ input {
     -o-transition: background 0.2s;
     transition: background 0.2s;
 }
-
-.button-secondary {
-    color: #e36209;
-    background: none;
-    box-shadow: 0 0 0 2px #7c689b inset;
-    -webkit-transition: box-shadow 0.2s, color 0.2s;
-    -moz-transition: box-shadow 0.2s, color 0.2s;
-    -ms-transition: box-shadow 0.2s, color 0.2s;
-    -o-transition: box-shadow 0.2s, color 0.2s;
-    transition: box-shadow 0.2s, color 0.2s;
-}
-
 
 .sticky-nav {
     position: sticky;

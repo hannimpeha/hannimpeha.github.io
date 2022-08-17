@@ -9,6 +9,8 @@ class Header extends Component {
         password: '',
         errors: [],
     }
+
+
     handleClick = (index) => this.setState({ activeIndex: index });
     render() {
         const clickables = [
