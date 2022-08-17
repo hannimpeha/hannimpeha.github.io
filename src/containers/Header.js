@@ -9,9 +9,6 @@ class Header extends Component {
         password: '',
         errors: [],
     }
-
-
-    handleClick = (index) => this.setState({ activeIndex: index });
     render() {
         const clickables = [
             { name: "Home"},
@@ -37,8 +34,6 @@ class Header extends Component {
                     })
                     }
                 </ul>
-            </div>
-            <div>
                 <ul class="nav-right">
                     <input type="search" className="form-control rounded"
                            placeholder="Search" aria-label="Search"
@@ -49,6 +44,7 @@ class Header extends Component {
             </div>
             </nav>
         );
+
     }
 }
 

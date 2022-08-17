@@ -1,27 +1,21 @@
-import React from 'react';
+import React, {Component} from 'react';
+import {Provider} from "./Context";
 import { Link } from 'react-router-dom';
 
-export default class Header extends React.PureComponent {
+export default class Login extends Component {
     render() {
-        const { context } = this.props;
+        const {context} = this.props;
         const authUser = context.authenticatedUser;
         return (
-            <div>
-                <div>
+                <div className="Login">
                     <nav>
                         {authUser ? (
-                            <React.Fragment>
-                                <span>Welcome, {authUser.name}!</span>
-                                <Link to="/Logout">Log Out</Link>
-                            </React.Fragment>
+                            <Link to ={`/${this.props.name}`}/>
                         ) : (
-                            <React.Fragment>
-                                <Link to="/Login">Log In</Link>
-                            </React.Fragment>
+                            <Link to={`/${this.props.name}`}/>
                         )}
                     </nav>
                 </div>
-            </div>
         );
     }
-};
+}

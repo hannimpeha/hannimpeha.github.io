@@ -13,7 +13,7 @@ export default (props) => {
     }
 
     return (
-        <div>
+        <div className="Login">
             <form onSubmit={handleSubmit}>
                 {elements()}
                 <div>
