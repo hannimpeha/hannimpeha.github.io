@@ -26,18 +26,14 @@ class Header extends Component {
             <nav>
                 <div>
                 <ul className="nav-left">
-                    {clickables.map((clickable, i) => {
-                        return(
-                            <div>
-                        <Link to={`/${clickable.name}`}>
-                            <ul>
-                            className={clickable.name}
-                            onClick={this.handleClick}>{clickable.name}
-                            isActive=()=>{this.state.activeIndex === i}
-                            </ul>
-                        </Link>
-                            </div>)
 
+                    {clickables.map((clickable, i) => {
+                        return(<Navbar
+                            key={clickable.name}
+                            name={clickable.name}
+                            index={i}
+                            isActive={this.state.activeIndex===i}
+                            onClick={this.handleClick}/>)
                     })}
                     </ul>
                     <ul className="nav-right">

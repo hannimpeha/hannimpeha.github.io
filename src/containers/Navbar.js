@@ -7,9 +7,9 @@ export default class Navbar extends Component {
 
     render() {
         return (
-            <Link to={`/${this.props.name}`}>
-                     className={this.props.isActive ? 'active' : ''}
-                     onClick={this.handleClick}>{this.props.name}
+            <Link to={`/${this.props.name}`}
+                  className={this.props.isActive ? 'active' : ''}>
+                  onClick={this.handleClick}>{this.props.name}
             </Link>
         );
     }

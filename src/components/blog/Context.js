@@ -95,7 +95,7 @@ export class Provider extends Component {
     }
 
 
-    handleModifyBlog = (index, value) => {
+    handleModifyBlog = index => {
         this.setState( prevState => {
             return {
                 blogs: [
