@@ -9,6 +9,8 @@ import Login from "../components/login/Login";
 import Signin from '../components/login/Signin';
 import Signup from "../components/login/Signup";
 import Header from "./Header";
+import NotFound from "./NotFound";
+import PrivateRoute from "../PrivateRoute";
 const LoginWithContext = withContext(Login);
 const SigninWithContext = withContext(Signin);
 const SignupwithContext = withContext(Signup);
@@ -23,10 +25,11 @@ const Main = () => (
         <Switch>
             <Route path='/Home' component={Home} element={<Home />} />
             <Route path='/Wiki' component={Wiki} element={<Wiki />}/>
-            <Route path='/Blog' component={Blog} element={<Blog />}/>
+            <PrivateRoute path='/Blog' component={Blog} element={<Blog />}/>
             <Route path='/Contact' component={Contact} element={<Contact />}/>
             <Route path='/Signup' component={SignupwithContext}/>
             <Route path='/Signin' component={SigninWithContext} />
+            <Route component={NotFound} />
         </Switch>
         </div>
     </Router>
