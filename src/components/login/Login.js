@@ -9,20 +9,23 @@ const Login =()=> {
 
         return (
             <div>
+                <nav>
                 {authUser ? (
                     <React.Fragment>
+                            <ul className="nav-right">
                         <span>Welcome, {authUser.name}!</span>
                         <Link to="/Signout">Sign Out</Link>
+                            </ul>
                     </React.Fragment>
                 ) : (
                     <React.Fragment>
-
+                                <ul className="nav-right">
                         <Link to="/Signup">Sign Up</Link>
                         <Link to="/Signin">Sign In</Link>
+                                </ul>
                     </React.Fragment>
                 )}
-
-
+                </nav>
             </div>
         )
 }

@@ -23,10 +23,6 @@ nav ul {
     padding: 0px;
     overflow: hidden;
 }
-li
-{
-    display:inline-block;
-}
 
 .nav-left {
     float: left;
@@ -34,8 +30,6 @@ li
 
 .nav-right {
     float: right;
-    margin-top: 10px;
-    margin-right: 10px;
 }
 
 li:hover {

@@ -21,32 +21,32 @@ class Header extends Component {
             { name: "Blog"},
             { name: "Contact"}];
         return (
-            <nav>
                 <div>
-                <ul className="nav-left">
-
                     {clickables.map((clickable, i) => {
                         return(
                         <React.Fragment>
+                            <nav>
+                                <ul className="nav-left">
                         <Navbar
                             key={clickable.name}
                             name={clickable.name}
                             index={i}
                             isActive={this.state.activeIndex === i}
                             onClick={this.handleClick}/>
+                                </ul>
+                            </nav>
                         </React.Fragment>
+
                         )
                     })}
-                    </ul>
-                    <ul className="nav-right">
-                         <input type="search" className="form-control rounded"
-                                placeholder="Search" aria-label="Search"
-                                aria-describedby="search-addon"/>
-                         <button type="button" className="btn btn-outline-primary">
-                             search</button>
-                    </ul>
+                    {/*<ul className="nav-right">*/}
+                    {/*     <input type="search" className="form-control rounded"*/}
+                    {/*            placeholder="Search" aria-label="Search"*/}
+                    {/*            aria-describedby="search-addon"/>*/}
+                    {/*     <button type="button" className="btn btn-outline-primary">*/}
+                    {/*         search</button>*/}
+                    {/*</ul>*/}
                 </div>
-            </nav>
         );
     }
 }
