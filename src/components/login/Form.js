@@ -2,6 +2,7 @@ import React from 'react';
 
 export default (props) => {
     const {
+        errors,
         submit,
         submitButtonText,
         elements,
@@ -13,13 +14,33 @@ export default (props) => {
     }
 
     return (
-        <div className="Login">
+        <div>
+            <ErrorsDisplay errors={errors} />
             <form onSubmit={handleSubmit}>
                 {elements()}
-                <div>
+                <div className="pad-bottom">
                     <button className="button" type="submit">{submitButtonText}</button>
+                    <button className="button button-secondary" onClick={handleCancel}>Cancel</button>
                 </div>
             </form>
         </div>
     );
+}
+
+function ErrorsDisplay({ errors }) {
+    let errorsDisplay = null;
+
+    if (errors.length) {
+        errorsDisplay = (
+            <div>
+                <div>
+                    <ul>
+                        {errors.map((error, i) => <li key={i}>{error}</li>)}
+                    </ul>
+                </div>
+            </div>
+        );
+    }
+
+    return errorsDisplay;
 }

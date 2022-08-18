@@ -1,8 +1,8 @@
 import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
-import { Consumer } from './Context';
+import { Consumer } from '../../Context';
 
-function Private ({ component: Component, ...rest }){
+export default ({ component: Component, ...rest })=>{
     return (
         <Consumer>
             {context => (
@@ -22,5 +22,3 @@ function Private ({ component: Component, ...rest }){
         </Consumer>
     );
 };
-
-export default Private;

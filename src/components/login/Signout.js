@@ -1,7 +1,10 @@
 import React from 'react';
+import { Redirect } from 'react-router-dom';
 
-export default function Signout(props){
+export default ({context}) => {
+    context.actions.signOut();
+
     return (
-        <button onClick={props.onClick}>Logout</button>
+        <Redirect to="/" />
     );
 }

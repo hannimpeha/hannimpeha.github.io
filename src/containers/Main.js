@@ -5,9 +5,15 @@ import Wiki from '../components/wiki/Wiki';
 import Repo from '../components/public/Repo';
 import Blog from '../components/blog/Blog';
 import Contact from '../components/public/Contact';
-import { withContext } from '../components/login/Context';
+import {Context, withContext } from '../Context';
 import Login from "../components/login/Login";
+import Signin from '../components/login/Signin';
+import PrivateRoute from "../components/login/PrivateRoute"
+import Authen from "../components/login/Authenticated";
+import Signup from "../components/login/Signup";
 const LoginWithContext = withContext(Login);
+const SigninWithContext = withContext(Signin);
+const AuthWithContext = withContext(Authen)
 
 
 const Main = () => (
@@ -17,9 +23,10 @@ const Main = () => (
         <Route path='/Repo' component={Repo} element={<Repo />}/>
         <Route path='/Blog' component={Blog} element={<Blog />}/>
         <Route path='/Contact' component={Contact} element={<Contact />}/>
-        <Route path='/Login' component={Login} element={<Login />}/>
+        <Route path='/Login' component={LoginWithContext}/>
+        <Route path='/Signup' component={Signup}/>
+        <PrivateRoute path='/Signin' component={SigninWithContext} />
     </Switch>
-
 )
 
 

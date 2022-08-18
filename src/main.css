@@ -135,3 +135,27 @@ img {
 .Signout {
     padding: 100px 100px 100px 100px;
 }
+
+.pad-bottom {
+    padding-bottom: 40px;
+}
+
+.signout {
+    margin-top: 60px;
+}
+
+
+.header nav span {
+    color: #fff;
+    margin-left: 20px;
+}
+
+
+.validation--errors--label {
+    color: #7c689b;
+    font-size: 28px;
+}
+.validation-errors ul {
+    color: #7c689b;
+    padding: 15px 0 40px 10px;
+}

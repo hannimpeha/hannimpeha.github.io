@@ -1,8 +1,9 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import Navbar from './Navbar';
-
+import Login from "../components/login/Login";
 
 class Header extends Component {
+
     state = {
         activeIndex: null,
         username: '',
@@ -10,6 +11,7 @@ class Header extends Component {
         errors: [],
     }
     render() {
+
         const clickables = [
             { name: "Home"},
             { name: "Wiki"},
@@ -33,6 +35,9 @@ class Header extends Component {
                         />
                     })
                     }
+                </ul>
+                <ul>
+                    <Login />
                 </ul>
                 <ul class="nav-right">
                     <input type="search" className="form-control rounded"
