@@ -22,7 +22,7 @@ const Main = () => (
     <Router>
         <div>
             <HeaderWithContext />
-            <Login />
+            <LoginWithContext />
         <Switch>
             <Route path='/Home' component={Home} element={<Home />} />
             <Route path='/Wiki' component={Wiki} element={<Wiki />}/>

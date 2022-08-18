@@ -20,20 +20,22 @@ class Header extends Component {
             { name: "Repo"},
             { name: "Blog"},
             { name: "Contact"}];
-        const authUser = Context.Context.Provider
-
         return (
             <nav>
                 <div>
                 <ul className="nav-left">
 
                     {clickables.map((clickable, i) => {
-                        return(<Navbar
+                        return(
+                        <React.Fragment>
+                        <Navbar
                             key={clickable.name}
                             name={clickable.name}
                             index={i}
-                            isActive={this.state.activeIndex===i}
-                            onClick={this.handleClick}/>)
+                            isActive={this.state.activeIndex === i}
+                            onClick={this.handleClick}/>
+                        </React.Fragment>
+                        )
                     })}
                     </ul>
                     <ul className="nav-right">

@@ -16,10 +16,13 @@ const Login =()=> {
                     </React.Fragment>
                 ) : (
                     <React.Fragment>
+
                         <Link to="/Signup">Sign Up</Link>
                         <Link to="/Signin">Sign In</Link>
                     </React.Fragment>
                 )}
+
+
             </div>
         )
 }
