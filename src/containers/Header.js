@@ -1,11 +1,7 @@
 import React, {Component, useContext} from 'react';
 import Navbar from './Navbar';
-import Login from "../components/login/Login";
-import {Link} from "react-router-dom";
-import Context, {withContext} from "../Context";
 
 class Header extends Component {
-
     state = {
         activeIndex: null,
         username: '',
@@ -17,7 +13,6 @@ class Header extends Component {
     const clickables = [
             { name: "Home"},
             { name: "Wiki"},
-            { name: "Repo"},
             { name: "Blog"},
             { name: "Contact"}];
         return (

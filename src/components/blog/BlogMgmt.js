@@ -1,8 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { Consumer } from './Context';
-import ModifyBlog from "./ModifyBlog";
-
 class BlogMgmt extends PureComponent {
 
     static propTypes = {
@@ -20,7 +18,6 @@ class BlogMgmt extends PureComponent {
                     { ({ actions, blogs }) => (
                         <span>
               <button onClick={() => actions.removeBlog(blogs[index].id)}>Delete</button>
-              <button onClick={() => actions.modifyBlog(blogs[index].id)}>Modify</button>
                             <p> {blogs[index].title } </p>
                             <p> {blogs[index].content} </p>
                         </span>

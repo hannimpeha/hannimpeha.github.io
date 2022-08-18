@@ -1,11 +1,11 @@
 import React from 'react';
-import { Consumer } from './Context';
+import { ConsumerLogin } from './Context';
 import { Route, Redirect } from 'react-router-dom';
 
 
 export default ({ component: Component, ...rest })=>{
     return (
-        <Consumer>
+        <ConsumerLogin>
             {context => (
                 <Route
                     {...rest}
@@ -20,6 +20,6 @@ export default ({ component: Component, ...rest })=>{
                     }
                 />
             )}
-        </Consumer>
+        </ConsumerLogin>
     );
 };

@@ -10,7 +10,6 @@ export class Provider extends Component {
         this.data = new Data();
         this.cookie = Cookies.get('authenticatedUser');
         this.state = {authenticatedUser:  this.cookie? JSON.parse(this.cookie): null};
-        this.handleClick = () => this.props.onClick(this.props.index)
     }
 
     render() {
@@ -52,9 +51,10 @@ export class Provider extends Component {
         this.setState({ authenticatedUser: null });
         Cookies.remove('authenticatedUser');
     }
+
 }
 
-export const Consumer = Context.Consumer;
+export const ConsumerLogin = Context.Consumer;
 
 export function withContext(Component) {
     return function ContextComponent(props) {
