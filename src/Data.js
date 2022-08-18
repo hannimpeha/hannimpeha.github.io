@@ -1,4 +1,4 @@
-import config from './components/login/config';
+import config from './config';
 
 export default class Data {
     api(path, method = 'GET', body = null, requiresAuth = false, credentials = null) {

@@ -90,7 +90,8 @@ export default function Signup() {
                         </React.Fragment>
                     )} />
                 <p>
-                    Already have a user account? <Link to="/Signin">Click here</Link> to sign in!
+                    Already have a user account?
+                    <Link to="/Signin">Click here</Link> to sign in!
                 </p>
             </div>
         </div>

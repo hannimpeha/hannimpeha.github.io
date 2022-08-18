@@ -17,8 +17,8 @@ export default class SignIn extends Component {
         } = this.state;
 
         return (
-            <div className="bounds">
-                <div className="grid-33 centered signin">
+            <div>
+                <div>
                     <h1>Sign In</h1>
                     <Form
                         cancel={this.cancel}
@@ -44,7 +44,8 @@ export default class SignIn extends Component {
                             </React.Fragment>
                         )} />
                     <p>
-                        Don't have a user account? <Link to="/Signup">Click here</Link> to sign up!
+                        Don't have a user account?
+                        <Link to="/Signup">Click here</Link> to sign up!
                     </p>
                 </div>
             </div>
@@ -64,7 +65,7 @@ export default class SignIn extends Component {
 
     submit = () => {
         const { context } = this.props;
-        const { from } = this.props.location.state || { from: { pathname: '/authenticated' } };
+        const { from } = this.props.location.state || { from: { pathname: '/Login' } };
         const { username, password } = this.state;
 
         context.actions.signIn(username, password)

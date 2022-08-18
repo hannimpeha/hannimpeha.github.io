@@ -9,10 +9,8 @@ export class Provider extends Component {
         super();
         this.data = new Data();
         this.cookie = Cookies.get('authenticatedUser');
-
-        this.state = {
-            authenticatedUser: this.cookie ? JSON.parse(this.cookie) : null
-        };
+        this.state = {authenticatedUser:  this.cookie? JSON.parse(this.cookie): null};
+        this.handleClick = () => this.props.onClick(this.props.index)
     }
 
     render() {
@@ -29,6 +27,7 @@ export class Provider extends Component {
             <Context.Provider value={value}>
                 {this.props.children}
             </Context.Provider>
+
         );
     }
 
@@ -44,7 +43,7 @@ export class Provider extends Component {
             const cookieOptions = {
                 expires: 1 // 1 day
             };
-            Cookies.set('authenticatedUser', JSON.stringify(user), cookieOptions);
+            Cookies.set('authenticatedUser', JSON.stringify(user), {cookieOptions});
         }
         return user;
     }
@@ -56,7 +55,6 @@ export class Provider extends Component {
 }
 
 export const Consumer = Context.Consumer;
-
 
 export function withContext(Component) {
     return function ContextComponent(props) {

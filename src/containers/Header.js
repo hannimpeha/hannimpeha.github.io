@@ -1,6 +1,8 @@
-import React, {Component} from 'react';
+import React, {Component, useContext} from 'react';
 import Navbar from './Navbar';
 import Login from "../components/login/Login";
+import {Link} from "react-router-dom";
+import Context, {withContext} from "../Context";
 
 class Header extends Component {
 
@@ -10,46 +12,44 @@ class Header extends Component {
         password: '',
         errors: [],
     }
-    render() {
 
-        const clickables = [
+    render(){
+    const clickables = [
             { name: "Home"},
             { name: "Wiki"},
             { name: "Repo"},
             { name: "Blog"},
-            { name: "Contact"},
-            { name: "Login"}
-            ];
+            { name: "Contact"}];
+        const authUser = Context.Context.Provider
 
         return (
             <nav>
-            <div>
+                <div>
                 <ul className="nav-left">
                     {clickables.map((clickable, i) => {
-                        return <Navbar
-                            key={clickable.name}
-                            name={clickable.name}
-                            index={i}
-                            isActive={this.state.activeIndex === i}
-                            onClick={this.handleClick}
-                        />
-                    })
-                    }
-                </ul>
-                <ul>
-                    <Login />
-                </ul>
-                <ul class="nav-right">
-                    <input type="search" className="form-control rounded"
-                           placeholder="Search" aria-label="Search"
-                           aria-describedby="search-addon"/>
-                    <button type="button" className="btn btn-outline-primary">
-                        search</button>
-                </ul>
-            </div>
+                        return(
+                            <div>
+                        <Link to={`/${clickable.name}`}>
+                            <ul>
+                            className={clickable.name}
+                            onClick={this.handleClick}>{clickable.name}
+                            isActive=()=>{this.state.activeIndex === i}
+                            </ul>
+                        </Link>
+                            </div>)
+
+                    })}
+                    </ul>
+                    <ul className="nav-right">
+                         <input type="search" className="form-control rounded"
+                                placeholder="Search" aria-label="Search"
+                                aria-describedby="search-addon"/>
+                         <button type="button" className="btn btn-outline-primary">
+                             search</button>
+                    </ul>
+                </div>
             </nav>
         );
-
     }
 }
 

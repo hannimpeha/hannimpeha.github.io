@@ -1,10 +1,13 @@
 import React from 'react';
-import { render } from 'react-dom';
+import ReactDOM from 'react-dom';
 import App from './App';
 import './main.css';
+import './images/styles/global.css';
+import './images/styles/new.css';
+import { BrowserRouter as Router } from "react-router-dom";
 import {Provider} from "./Context";
 
-render(
+ReactDOM.render(
     (<Provider>
         <App />
     </Provider>),

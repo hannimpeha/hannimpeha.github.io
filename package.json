@@ -10,19 +10,18 @@
     "atomize": "^1.0.28",
     "bootstrap": "^5.2.0",
     "containers": "^0.0.1",
+    "js-cookie": "^3.0.1",
     "node-polyfill-webpack-plugin": "^2.0.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.5.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^5.3.0",
-    "react-scripts": "4.0.3",
     "react-transition-group": "^4.4.5",
-    "web-vitals": "^2.1.4",
-    "js-cookie": "^3.0.1"
+    "web-vitals": "^2.1.4"
   },
   "devDependencies": {
     "react-favicon": "^1.0.1",
-    "react-scripts": "latest",
+    "react-scripts": "^2.1.3",
     "styletron-engine-atomic": "^1.5.0",
     "styletron-react": "^6.1.0",
     "workbox-webpack-plugin": "^6.5.4"
@@ -44,5 +43,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hannimpeha/hannimpeha.github.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hannimpeha/hannimpeha.github.io/issues"
+  },
+  "homepage": "https://github.com/hannimpeha/hannimpeha.github.io#readme"
 }

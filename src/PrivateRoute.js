@@ -1,6 +1,7 @@
 import React from 'react';
+import { Consumer } from './Context';
 import { Route, Redirect } from 'react-router-dom';
-import { Consumer } from '../../Context';
+
 
 export default ({ component: Component, ...rest })=>{
     return (
@@ -12,7 +13,7 @@ export default ({ component: Component, ...rest })=>{
                         <Component {...props} />
                     ) : (
                         <Redirect to={{
-                            pathname: '/Login',
+                            pathname: '/Signin',
                             state: { from: props.location }
                         }} />
                     )
