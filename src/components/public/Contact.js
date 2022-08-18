@@ -4,8 +4,10 @@ const Contact =() =>{
         return (
             <div className="Contact">
                 <h1>This is hannimpeha's Contact</h1>
-                <p>+82 10-2483-0617</p>
-                <p>https://github.com/hannimpeha</p>
+                <br />
+                <h5>+82 10-2483-0617</h5>
+                <h5>https://github.com/hannimpeha</h5>
+                <h5>hannimpeha@hanmail.net</h5>
             </div>)
 }
 export default Contact;

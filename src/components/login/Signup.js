@@ -59,7 +59,7 @@ export default function Signup() {
         context.history.push('/');
     }
     return (
-        <div>
+        <div className="Signup">
             <div>
                 <h1>Sign Up</h1>
                 <Form

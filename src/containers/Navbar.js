@@ -8,8 +8,11 @@ export default class Navbar extends Component {
     render() {
         return (
             <React.Fragment>
-            <Link to={`/${this.props.name}`} className={this.props.isActive ? 'active' : ''} >
-                {this.props.name}
+            <Link to={`/${this.props.name}`}>
+                <li>
+                    {this.props.isActive ? 'active' : ''}
+                    {this.props.name}
+                </li>
             </Link>
             </React.Fragment>
         );

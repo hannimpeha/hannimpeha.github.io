@@ -9,7 +9,6 @@ const Login =()=> {
 
         return (
             <div>
-                <nav>
                 {authUser ? (
                     <React.Fragment>
                             <ul className="nav-right">
@@ -25,7 +24,6 @@ const Login =()=> {
                                 </ul>
                     </React.Fragment>
                 )}
-                </nav>
             </div>
         )
 }

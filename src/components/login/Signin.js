@@ -17,7 +17,7 @@ export default class SignIn extends Component {
         } = this.state;
 
         return (
-            <div>
+            <div className="Login">
                 <div>
                     <h1>Sign In</h1>
                     <Form

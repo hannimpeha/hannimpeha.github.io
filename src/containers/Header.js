@@ -20,7 +20,7 @@ class Header extends Component {
                     {clickables.map((clickable, i) => {
                         return(
                         <React.Fragment>
-                            <nav>
+                            <nav className="sticky-nav">
                                 <ul className="nav-left">
                         <Navbar
                             key={clickable.name}
@@ -34,13 +34,13 @@ class Header extends Component {
 
                         )
                     })}
-                    {/*<ul className="nav-right">*/}
-                    {/*     <input type="search" className="form-control rounded"*/}
-                    {/*            placeholder="Search" aria-label="Search"*/}
-                    {/*            aria-describedby="search-addon"/>*/}
-                    {/*     <button type="button" className="btn btn-outline-primary">*/}
-                    {/*         search</button>*/}
-                    {/*</ul>*/}
+                    <ul className="nav-right">
+                         <input type="search" className="form-control rounded"
+                                placeholder="Search" aria-label="Search"
+                                aria-describedby="search-addon"/>
+                         <button type="button" className="btn btn-outline-primary">
+                             search</button>
+                    </ul>
                 </div>
         );
     }

@@ -4,7 +4,7 @@ import Home from '../components/public/Home';
 import Wiki from '../components/wiki/Wiki';
 import Blog from '../components/blog/Blog';
 import Contact from '../components/public/Contact';
-import {withContext } from '../Context';
+import Context, {withContext } from '../Context';
 import Login from "../components/login/Login";
 import Signin from '../components/login/Signin';
 import Signup from "../components/login/Signup";
@@ -25,7 +25,7 @@ const Main = () => (
         <Switch>
             <Route path='/Home' component={Home} element={<Home />} />
             <Route path='/Wiki' component={Wiki} element={<Wiki />}/>
-            <PrivateRoute path='/Blog' component={Blog} element={<Blog />}/>
+            <Route path='/Blog' component={Blog} element={<Blog />}/>
             <Route path='/Contact' component={Contact} element={<Contact />}/>
             <Route path='/Signup' component={SignupwithContext}/>
             <Route path='/Signin' component={SigninWithContext} />

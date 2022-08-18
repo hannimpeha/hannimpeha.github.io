@@ -1,10 +1,10 @@
-import React, {Component} from 'react';
+import React  from 'react';
 
-const Wiki =() => {
+const Wiki = () => {
         return (
+            <div>
             <div className="Wiki">
                 <h1>This is hannimpeha's Wiki</h1>
-                <br/>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis fermentum ac enim rhoncus molestie.
                     Suspendisse fermentum interdum urna ut sagittis. Mauris dapibus nisi a elit suscipit, nec congue leo
@@ -36,6 +36,8 @@ const Wiki =() => {
                     porttitor, mauris ac fringilla tempus, metus tellus eleifend magna, quis semper massa dui at libero.
                     Morbi dolor velit, interdum vel cursus sed, pulvinar ac nibh. Suspendisse porttitor venenatis nulla.
                 </p>
-            </div>)
+            </div>
+            </div>
+        )
 }
 export default Wiki;
